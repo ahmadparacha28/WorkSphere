@@ -1,0 +1,153 @@
+
+.employee-profile {
+  padding: 24px;
+  color: #1e293b;
+}
+
+.profile-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.profile-heading h2 {
+  margin: 0 0 6px;
+  font-size: 25px;
+}
+
+.profile-heading p {
+  margin: 0;
+  color: #64748b;
+}
+
+.profile-refresh,
+.profile-error button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border: 1px solid #dbe3ee;
+  border-radius: 8px;
+  background: white;
+  color: #334155;
+  cursor: pointer;
+}
+
+.profile-card,
+.profile-details {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.profile-card {
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e0e7ff;
+  color: #4338ca;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.profile-card h3 {
+  margin: 0 0 6px;
+  font-size: 21px;
+}
+
+.profile-card p {
+  margin: 0 0 10px;
+  color: #64748b;
+}
+
+.profile-card span {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 13px;
+}
+
+.profile-details h3 {
+  margin: 0 0 22px;
+}
+
+.profile-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.profile-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.profile-detail-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.profile-detail-item small {
+  color: #64748b;
+}
+
+.profile-detail-item p {
+  margin: 5px 0 0;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.profile-note {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.profile-message,
+.profile-error {
+  padding: 30px;
+  text-align: center;
+}
+
+.profile-error {
+  color: #b91c1c;
+}
+
+.profile-error button {
+  margin: 15px auto 0;
+}
+
+@media (max-width: 650px) {
+  .profile-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .profile-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-profile {
+    padding: 14px;
+  }
+}

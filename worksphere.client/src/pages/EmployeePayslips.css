@@ -1,0 +1,395 @@
+
+.employee-payslips {
+  padding: 24px;
+  color: #1e293b;
+}
+
+.payslips-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.payslips-header h2 {
+  margin: 0 0 6px;
+  font-size: 25px;
+}
+
+.payslips-header p {
+  margin: 0;
+  color: #64748b;
+}
+
+.payslip-refresh,
+.payslip-view-button,
+.payslip-print-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.payslip-refresh {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.payslip-refresh:disabled,
+.payslip-view-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.payslip-summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 22px;
+  max-width: 320px;
+}
+
+.payslip-summary-icon {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.payslip-summary span,
+.print-employee-details span,
+.payslip-payment-details span {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.payslip-summary h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.payslip-table-container {
+  overflow-x: auto;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.payslip-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 850px;
+}
+
+.payslip-table th,
+.payslip-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.payslip-table th {
+  background: #f8fafc;
+  color: #475569;
+  font-size: 13px;
+}
+
+.payslip-table td {
+  font-size: 14px;
+}
+
+.pay-period {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.net-salary {
+  font-weight: 700;
+  color: #047857;
+}
+
+.payslip-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 20px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.payslip-status.paid {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.payslip-status.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.payslip-view-button {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.payslip-empty,
+.payslip-message {
+  padding: 45px 20px;
+  text-align: center;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  color: #64748b;
+}
+
+.payslip-empty h3 {
+  color: #1e293b;
+}
+
+.payslip-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.payslip-loading-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1001;
+  display: grid;
+  place-items: center;
+  background: #ffffffaa;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.payslip-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+  padding: 30px 15px;
+  background: #0f172a99;
+}
+
+.payslip-modal {
+  position: relative;
+  width: 100%;
+  max-width: 780px;
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 20px 50px #0002;
+}
+
+.payslip-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.payslip-close {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.print-payslip-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #1e293b;
+}
+
+.print-payslip-header h2 {
+  margin: 0 0 5px;
+  color: #1d4ed8;
+}
+
+.print-payslip-header p {
+  margin: 0;
+  color: #64748b;
+}
+
+.print-payslip-period {
+  text-align: right;
+}
+
+.print-payslip-period strong,
+.print-payslip-period span {
+  display: block;
+}
+
+.print-payslip-period span {
+  margin-top: 5px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.print-employee-details,
+.payslip-payment-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding: 20px 0;
+}
+
+.print-employee-details strong,
+.payslip-payment-details strong {
+  overflow-wrap: anywhere;
+}
+
+.payslip-section-title {
+  margin: 18px 0 8px;
+  font-size: 15px;
+}
+
+.payslip-breakdown {
+  border-top: 1px solid #e2e8f0;
+}
+
+.payslip-breakdown > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 11px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.payslip-total {
+  font-weight: 700;
+  background: #f8fafc;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.payslip-net-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 8px;
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+.payslip-net-total strong {
+  font-size: 22px;
+}
+
+.payslip-notes {
+  margin-top: 18px;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.payslip-footer {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #e2e8f0;
+  text-align: center;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.payslip-print-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.payslip-print-actions button {
+  background: #2563eb;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .employee-payslips {
+    padding: 14px;
+  }
+
+  .payslips-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .print-employee-details,
+  .payslip-payment-details {
+    grid-template-columns: 1fr;
+  }
+
+  .payslip-modal {
+    padding: 16px;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 15mm;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  .payslip-modal-overlay,
+  .payslip-modal-overlay * {
+    visibility: visible !important;
+  }
+
+  .payslip-modal-overlay {
+    position: absolute;
+    inset: 0;
+    display: block;
+    overflow: visible;
+    padding: 0;
+    background: white;
+  }
+
+  .payslip-modal {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .printable-payslip {
+    width: 100%;
+  }
+}
